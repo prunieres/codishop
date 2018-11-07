@@ -10,5 +10,18 @@
 </head>
 <body>
     <header>
-        Header
+        <nav>
+            <ul>
+                <?php
+                    $pages = get_pages(['include' => ['14','42','47','45']]);
+                    foreach ($pages as $page) {
+                ?>
+                        <li>
+                            <a href="<?php echo $page->guid ?>"><?php echo $page->post_title ?></a>
+                        </li>
+                 <?php
+                    }
+                 ?>
+            </ul>
+        </nav>
     </header>
