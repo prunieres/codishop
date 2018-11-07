@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/prunieres/codishop#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.5.0"
+    "@fortawesome/fontawesome-free": "^5.5.0",
+    "bootstrap": "^4.1.3"
   }
 }

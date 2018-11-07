@@ -1,3 +1,60 @@
 /*
 Theme Name: codishop
 */
+
+/* HEADER */
+.container-fluid{
+    margin:0;
+    padding: 0;
+}
+header{
+    background-color:#EDEDEE;
+    padding-top: 1em;
+}
+nav{
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+li{
+    list-style: none;
+    padding-right:1em;
+
+}
+.fa-header{
+    display: flex;
+    width: 7%;
+    justify-content: space-between;
+}
+nav ul li a{
+    color:black;
+
+}
+.slider {
+	min-height: 400px;
+	display: flex;
+    align-items:center;
+}
+.image{
+    width:40%;
+}
+.block-text{
+    width:60%;
+}
+.block-text h5 {
+	font-size: 2em;
+	font-weight: bold;
+}
+.block-text button {
+	padding: 1em 2em;
+	background-color: black;
+	color: white;
+}
+.woocommerce-products-header {
+	display: none;
+}
