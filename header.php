@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+<?php
+function debug($array){
+     echo '<pre>';
+     print_r($array);
+     echo  '</pre>';
+ }
+ ?>
 
 <head>
     <meta charset="UTF-8">
@@ -33,6 +40,17 @@
             </nav>
             <div class="slider">
                 <div class="image">
+                    <?php
+                    $products = wc_get_products( array( 'limit' => 3, ) );
+                    foreach ($products as $product) {
+                        the_title();
+                        ?>
+                        <img src="<?php echo get_the_post_thumbnail_url($product->get_id()) ?>" alt="">
+                        <?php
+                        }
+                    ?>
+
+
 
                 </div>
                 <div class="block-text">
