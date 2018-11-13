@@ -38,42 +38,35 @@ function debug($array){
                     <i class="fas fa-search"></i>
                 </div>
             </nav>
-            <div class="slider">
-                <div class="image">
+
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
                     <?php
-                    $products = wc_get_products( array( 'limit' => 3, ) );
+                    $products = wc_get_products( array( 'limit' => 6, ) );
+                    $active = 'active';
                     foreach ($products as $product) {
-                        the_title();
                         ?>
-                        <img src="<?php echo get_the_post_thumbnail_url($product->get_id()) ?>" alt="">
+                        <div class="carousel-item <?php echo $active ?>">
+                            <img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url($product->get_id()) ?>" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5><?php the_title(); ?></h5>
+                            </div>
+                        </div>
                         <?php
-                        }
-                    ?>
-
-
-
-                </div>
-                <div class="block-text">
-                    <h5>A beautiful little wooden table</h5>
-                    <p>Single, Clean and Easy to Use. Made in france </p>
-                    <button type="button" name="button">LEARN MORE</button>
+                        $active = '';
+                    }?>
                 </div>
             </div>
         </header>
 
-        <nav class="second">
-            <ul>
-                <?php
-                $pages = get_pages(['include' => ['14','42','47','45']]);
-                foreach ($pages as $page) {
-                    ?>
-                    <li>
-                        <a href="<?php echo $page->guid ?>"><?php echo $page->post_title ?></a>
-                    </li>
-                    <?php
-                }
-                ?>
-            </ul>
 
-        </nav>
+
+        <?php
+        // $query = new WC_Product_Query( array('limit' => 2,) );
+        // $products = $query->get_products();
+        // foreach ($products as $product) {
+        // }
+        ?>
+
     </div>
+    <!-- container -->

@@ -58,3 +58,7 @@ nav ul li a{
 .woocommerce-products-header {
 	display: none;
 }
+#carouselExampleSlidesOnly{
+    width:500px;
+    margin: auto;
+}
