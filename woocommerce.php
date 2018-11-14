@@ -37,8 +37,19 @@ get_header();
     </ul>
 </nav>
 
+
 <?php
-woocommerce_content();
+global $post;
+$args = array( 'numberposts' => 6, 'post_type'=>'product');
+$myposts = get_posts( $args );
+foreach( $myposts as $post ) :
+  setup_postdata($post); ?>
+	<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><img src="<?php the_post_thumbnail(); ?>"</li>
+<?php endforeach;
+wp_reset_postdata(); ?>
+</ul>
+<?php
+// woocommerce_content();
 ?>
 
     <a href="#" class="show">SHOW ALL</a>
