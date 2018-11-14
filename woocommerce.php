@@ -1,28 +1,7 @@
 <?php
 get_header();
 ?>
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <?php
-        $products = wc_get_products( array( 'limit' => 6, ) );
-        $active = 'active';
-        foreach ($products as $product) {
-            ?>
-            <div class="carousel-item <?php echo $active ?>">
-                <img src="<?php echo get_the_post_thumbnail_url($product->get_id()) ?>" alt="">
-                <div class="text">
-                    <h2><?php echo $product->get_title(); ?></h5>
-                    <p>
-                        <?php echo $product->get_description(); ?>
-                    </p>
-                    <button>LEARN MORE</button>
-                </div>
-            </div>
-            <?php
-            $active = '';
-        }?>
-    </div>
-</div>
+
 <nav>
     <ul>
         <?php
@@ -39,22 +18,8 @@ get_header();
 
 
 <?php
-global $post;
-$args = array( 'numberposts' => 6, 'post_type'=>'product');
-$myposts = get_posts( $args );
-foreach( $myposts as $post ) :
-  setup_postdata($post); ?>
-	<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><img src="<?php the_post_thumbnail(); ?>"</li>
-<?php endforeach;
-wp_reset_postdata(); ?>
-</ul>
-<?php
-// woocommerce_content();
+woocommerce_content();
 ?>
-
-    <a href="#" class="show">SHOW ALL</a>
-
-
 
 <?php
 get_footer();

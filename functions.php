@@ -34,4 +34,8 @@ function result_sorting_remove_hook(){
 }
 add_action( 'woocommerce_before_shop_loop', 'result_sorting_remove_hook', 1 );
 
+function register_my_menu() {
+  register_nav_menu('header-menu',__( 'Header Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
 ?>
