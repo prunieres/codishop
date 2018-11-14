@@ -68,7 +68,7 @@ get_header();
                     <?php echo $product->get_price(); ?>€
 
                 </p>
-                <a href="<?php echo $product->get_permalink()?>">link</a>
+                <a href="<?php echo $product->get_permalink()?>">Voir plus</a>
             </div>
         <?php
         }

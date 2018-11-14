@@ -21,6 +21,7 @@ get_header();
 woocommerce_content();
 ?>
 
+    <a href="#" class="show">SHOW ALL</a>
 <?php
 get_footer();
  ?>
