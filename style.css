@@ -10,7 +10,7 @@ Theme Name: codishop
 header{
     background-color:#EDEDEE;
     padding-top: 1em;
-    min-height: 600px;
+    min-height:1000px;
 }
 nav{
     padding-top: 1em;
@@ -40,7 +40,28 @@ nav ul li a{
 .woocommerce-products-header {
 	display: none;
 }
+
+/* --------------Carousel------------------------ */
 #carouselExampleSlidesOnly{
-    width:500px;
-    margin: auto;
+    width:80%;
+    margin: 10% auto;
+}
+.carousel-item img{
+    float:left;
+    width: 40%;
+}
+.text {
+    margin-top: 8em;
+    float: right;
+    width: 60%;
+}
+
+#carouselExampleSlidesOnly button {
+    background-color: black;
+    padding: 0.5em 1.2em;
+    color: white;
+}
+
+h2{
+    font-weight: bold;
 }

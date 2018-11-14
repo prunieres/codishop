@@ -47,9 +47,13 @@ function debug($array){
                     foreach ($products as $product) {
                         ?>
                         <div class="carousel-item <?php echo $active ?>">
-                            <img class="d-block w-100" src="<?php echo get_the_post_thumbnail_url($product->get_id()) ?>" alt="">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5><?php the_title(); ?></h5>
+                            <img src="<?php echo get_the_post_thumbnail_url($product->get_id()) ?>" alt="">
+                            <div class="text">
+                                <h2><?php echo $product->get_title(); ?></h5>
+                                <p>
+                                    <?php echo $product->get_description(); ?>
+                                </p>
+                                <button>LEARN MORE</button>
                             </div>
                         </div>
                         <?php
