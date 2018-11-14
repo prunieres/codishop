@@ -77,8 +77,3 @@ function debug($array){
             </li>
             </ul>
         </nav>
-
-
-
-    </div>
-    <!-- container -->

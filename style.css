@@ -65,3 +65,40 @@ nav ul li a{
 h2{
     font-weight: bold;
 }
+
+
+
+/* -------------------FOOTER -----------------*/
+
+footer{
+    background-color:#EDEDEE;
+    padding: 5em;
+}
+footer .col-md-4.left ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+}
+footer a{
+    color: black;
+    margin
+}
+p.design{
+    text-align: center;
+    margin-top: 3em;
+
+}
+.news{
+    display: flex;
+    flex-direction: column;
+}
+.news input, .news button{
+    width:50%;
+    margin-bottom:0.5em;
+    padding: 0.5em;
+}
+.news button{
+    background-color: black;
+    color: white;
+}
